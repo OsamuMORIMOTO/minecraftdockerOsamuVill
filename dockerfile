@@ -10,6 +10,7 @@ wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifac
 java -jar BuildTools.jar && \
 java -jar craftbukkit-1.10.2.jar && \
 sed -i 's/false/true/' eula.txt && \
+echo 'level-name=../../worldcontainer/world1' >> ./server.properties && \
 mkdir /opt/docker/plugins && \
 mkdir /opt/docker/git && \
 cd /opt/docker/git && \

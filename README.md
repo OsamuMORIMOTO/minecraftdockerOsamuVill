@@ -8,7 +8,8 @@
 ## USEAGE
 
 ```
-docker build -t OsamuVill
-docker run --name OsamuVill-container -p 25565:25565 OsamuVill
+docker run -d --name worldcontainer -v /worldcontainer -t busybox
+docker build -t osamu-vill-img .
+docker run --name osamu-vill-cont -p 25565:25565 -p 8123:8123 osamu-vill-img
 ```
 
