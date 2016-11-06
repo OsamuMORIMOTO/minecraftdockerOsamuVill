@@ -7,7 +7,7 @@ yum -y install java wget git maven && \
 mkdir /opt/docker && \
 cd /opt/docker && \
 wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar && \
-java -jar BuildTools.jar && \
+java -jar BuildTools.jar --rev 1.10.2 && \
 java -jar craftbukkit-1.10.2.jar && \
 sed -i 's/false/true/' eula.txt && \
 echo 'level-name=../../worldcontainer/world1' >> ./server.properties && \
